@@ -7,6 +7,7 @@ using System.IO;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
+using Web.Cars.Abstract;
 using Web.Cars.Data;
 using Web.Cars.Exceptions;
 using Web.Cars.Models;
@@ -18,17 +19,21 @@ namespace Web.Cars.Controllers
     public class UsersController : ControllerBase
     {
         private readonly AppEFContext _context;
+        private readonly IUserService _userService;
         private readonly IMapper _mapper;
         public UsersController(AppEFContext context,
+            IUserService userService,
             IMapper mapper)
         {
             _context = context;
+            _userService = userService;
             _mapper = mapper;
         }
         [Route("all")]
         [HttpGet]
         public IActionResult GetUsers()
         {
+            Thread.Sleep(2000);
             var list = _context.Users
                 .Select(x => _mapper.Map<UserItemViewModel>(x))
                 .ToList();
@@ -39,6 +44,7 @@ namespace Web.Cars.Controllers
         [HttpDelete]
         public async Task<IActionResult> DeleteUser(int id)
         {
+            Thread.Sleep(2000);
             try
             {
                 var user = _context.Users.SingleOrDefault(x => x.Id == id);
@@ -61,24 +67,24 @@ namespace Web.Cars.Controllers
                 return BadRequest(new { invalid = "Something went wrong on server " + ex.Message });
             }
         }
+
         [Route("edit/{id}")]
         [HttpGet]
-        public IActionResult Edit( int id)
+        public IActionResult Edit(int id)
         {
             Thread.Sleep(2000);
             var user = _context.Users
-                
                 .SingleOrDefault(x => x.Id == id);
-            return Ok(_mapper.Map<UserEditViewModel> (user));
+            return Ok(_mapper.Map<UserEditViewModel>(user));
         }
 
-        [HttpPost("save")]
-        public async Task<IActionResult> Save([FromForm] UserSaveViewModel user)
+        [HttpPut("save")]
+        public IActionResult Save([FromForm] UserSaveViewModel model)
         {
-            return BadRequest();
             try
             {
-
+                _userService.UpdateUser(model);
+                return Ok();
             }
             catch (AccountException aex)
             {
@@ -90,6 +96,4 @@ namespace Web.Cars.Controllers
             }
         }
     }
-
-
 }

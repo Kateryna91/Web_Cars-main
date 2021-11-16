@@ -59,10 +59,14 @@ namespace Web.Cars
 
             services.AddFluentValidation(x =>
                 x.RegisterValidatorsFromAssemblyContaining<Startup>()); /*For Validation*/
+           
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Web.Cars", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo
+                { Title = "Web.Cars", Version = "v1" });
             });
+
+
             services.AddCors();
             services.AddAutoMapper(typeof(AppMapProfile)); /*Add AutoMapper*/
 

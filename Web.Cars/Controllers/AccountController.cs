@@ -20,6 +20,7 @@ namespace Web.Cars.Controllers
         private readonly IUserService userService;
         private readonly UserManager<AppUser> _userManager;
         private readonly IJwtTokenService _tokenService;
+
         public AccountController(IUserService _userService, UserManager<AppUser> userManager, IJwtTokenService tokenService)
         {
             userService = _userService;

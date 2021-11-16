@@ -147,9 +147,9 @@ C:\Users\Kateryna\Desktop\Web_Cars-main\Web.Cars\bin\Debug\net5.0\runtimes\win-a
 C:\Users\Kateryna\Desktop\Web_Cars-main\Web.Cars\bin\Debug\net5.0\runtimes\win-x64\native\e_sqlite3.dll
 C:\Users\Kateryna\Desktop\Web_Cars-main\Web.Cars\bin\Debug\net5.0\runtimes\win-x86\native\e_sqlite3.dll
 C:\Users\Kateryna\Desktop\Web_Cars-main\Web.Cars\obj\Debug\net5.0\staticwebassets\Web.Cars.StaticWebAssets.Manifest.cache
-C:\Users\Kateryna\Desktop\Web_Cars-main\Web.Cars\obj\Debug\net5.0\staticwebassets\Web.Cars.StaticWebAssets.xml
 C:\Users\Kateryna\Desktop\Web_Cars-main\Web.Cars\obj\Debug\net5.0\scopedcss\bundle\Web.Cars.styles.css
 C:\Users\Kateryna\Desktop\Web_Cars-main\Web.Cars\obj\Debug\net5.0\Web.Cars.RazorTargetAssemblyInfo.cache
 C:\Users\Kateryna\Desktop\Web_Cars-main\Web.Cars\obj\Debug\net5.0\Web.Cars.genruntimeconfig.cache
 C:\Users\Kateryna\Desktop\Web_Cars-main\Web.Cars\bin\Debug\net5.0\SQLitePCLRaw.nativelibrary.dll
 C:\Users\Kateryna\Desktop\Web_Cars-main\Web.Cars\bin\Debug\net5.0\SQLitePCLRaw.provider.dynamic_cdecl.dll
+C:\Users\Kateryna\Desktop\Web_Cars-main\Web.Cars\obj\Debug\net5.0\Web.Cars.csproj.CopyComplete

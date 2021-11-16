@@ -2,7 +2,8 @@
   "runtimeOptions": {
     "additionalProbingPaths": [
       "C:\\Users\\Kateryna\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\Kateryna\\.nuget\\packages"
+      "C:\\Users\\Kateryna\\.nuget\\packages",
+      "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
     ]
   }
 }
